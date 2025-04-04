@@ -1,69 +1,64 @@
 # Hackathon-Project-Ideas
-// Dark Mode Toggle
-const darkModeToggle = document.getElementById("darkModeToggle");
-darkModeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-});
+Feb 2025 Cohort Hackathon 1: Portfolio Challenge 🚀
+Welcome to the PLP Academy Portfolio Challenge! 🎉
 
-// Drag and Drop Functionality
-const draggables = document.querySelectorAll(".draggable");
-const container = document.querySelector(".drag-container");
+This README.md file provides all the details you need to successfully complete and submit your project. Let’s get started! 💻
 
-draggables.forEach(draggable => {
-    draggable.addEventListener("dragstart", () => {
-        draggable.classList.add("dragging");
-    });
-    draggable.addEventListener("dragend", () => {
-        draggable.classList.remove("dragging");
-    });
-});
+🌟 Project Overview
+Your challenge is to build a personal portfolio website that showcases your skills, background, and achievements. Your portfolio should include:
 
-container.addEventListener("dragover", (e) => {
-    e.preventDefault();
-    const afterElement = getDragAfterElement(container, e.clientY);
-    const dragging = document.querySelector(".dragging");
-    if (afterElement == null) {
-        container.appendChild(dragging);
-    } else {
-        container.insertBefore(dragging, afterElement);
-    }
-});
+Programming Languages: List the programming languages you’re proficient in.
+About Section: Share a brief introduction about yourself, your passion, and what drives you.
+Educational Background: Provide details of your education and include a downloadable CV.
+Interests: Share what excites you about tech and your professional interests.
+Projects: Include links to your projects with brief descriptions.
+Contact Form: Make it easy for collaborators or employers to reach you.
+🛠️ Guidelines
+Skills: Build your portfolio using HTML and CSS. You’re free to incorporate additional technologies if you wish.
+Individual Work: This is a solo challenge—showcase your personal skills and creativity.
+Reference Material: For additional details and helpful information, refer to this document.
+Submission: Push your project to a public GitHub repository and complete the submission form.
+👥 Peer Group Collaboration
+To foster teamwork and ensure success for everyone, participants will be required to collaborate with their peer groups.
 
-function getDragAfterElement(container, y) {
-    const draggableElements = [...container.querySelectorAll(".draggable:not(.dragging)")];
-    return draggableElements.reduce((closest, child) => {
-        const box = child.getBoundingClientRect();
-        const offset = y - box.top - box.height / 2;
-        if (offset < 0 && offset > closest.offset) {
-            return { offset: offset, element: child };
-        } else {
-            return closest;
-        }
-    }, { offset: Number.NEGATIVE_INFINITY }).element;
-}
+Peer Group Structure:
+Support: Collaborate with your group members, share ideas, and troubleshoot issues together.
+Leadership: Each group's peer group leader will be responsible for guiding members and ensuring timely submissions.
+Recognition: Peer groups where all members successfully submit their portfolios by the deadline will receive special recognition during the Award Ceremony.
+Benefits of Peer Groups:
 
-// AI Resume Generation
-const resumeForm = document.getElementById("resumeForm");
-const resumeOutput = document.getElementById("resumeOutput");
+Get feedback on your portfolio before submission.
+Gain insights from your peers’ experiences.
+Celebrate success together as a team!
+📅 Key Dates
+Start Date: Mar 31st, 2025, 8:00 AM EAT End Date: April 4th, 2025, 8:00 AM EAT Award Ceremony: April 11th, 2024, 6:30 PM EAT
 
-resumeForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const name = document.getElementById("name").value;
-    const title = document.getElementById("title").value;
-    const email = document.getElementById("email").value;
-    const linkedin = document.getElementById("linkedin").value;
-    const github = document.getElementById("github").value;
-    const experience = document.getElementById("experience").value;
-    const skills = document.getElementById("skills").value;
+💼 Example Portfolio Sections
+📝 About Me
+Hi! I’m [Your Name], a passionate web developer with a love for creating functional and beautiful web experiences.
 
-    resumeOutput.innerHTML = `
-        <h3>${name}</h3>
-        <p><strong>Title:</strong> ${title}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/${linkedin}" target="_blank">${linkedin}</a></p>
-        <p><strong>GitHub:</strong> <a href="${github}" target="_blank">${github}</a></p>
-        <p><strong>Experience:</strong> ${experience}</p>
-        <p><strong>Skills:</strong> ${skills}</p>
-    `;
-});
- 
+🎓 Educational Background
+I hold a degree in [Your Degree] from [Your University].
+Download My CV
+
+💡 Interests
+Web Development: Exploring modern frameworks and best practices.
+Tech Innovations: Keeping up with emerging trends in technology.
+🛠️ Projects
+Project 1: A brief description of your project.
+Project 2: Another brief description.
+📬 Contact Me
+Feel free to reach out! Contact Form
+
+📁 Submission Instructions
+Create Your Portfolio: Build a complete portfolio website with all the required sections.
+Push to GitHub: Upload your project to a public GitHub repository.
+Update README: Ensure your README.md includes details about your portfolio.
+Submit Your Project: Use this form to share your GitHub repo.
+🏆 Evaluation Criteria
+Creativity and Ingenuity (20%): Original ideas and standout features.
+Code Quality (20%): Clean, readable, and efficient code.
+Documentation (15%): Informative README and clear code comments.
+Deployment (15%): Successfully hosted on a platform like GitHub Pages or Netlify.
+Development Process (15%): Effective collaboration and project management.
+Technology Stack (15%): Usage of responsive, visually appealing tools.
