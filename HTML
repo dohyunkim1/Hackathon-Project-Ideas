@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume & Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>AI Resume & Portfolio Generator</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+    
+    <main>
+        <section id="resume-builder">
+            <h2>Resume Builder</h2>
+            <form id="resumeForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" value="Alice Nkhoma" readonly>
+                
+                <label for="title">Title:</label>
+                <input type="text" id="title" value="ACCA" readonly>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="alicenkhoma222@gmail.com" readonly>
+                
+                <label for="linkedin">LinkedIn:</label>
+                <input type="text" id="linkedin" value="Alice Nkhoma" readonly>
+                
+                <label for="github">GitHub:</label>
+                <input type="text" id="github" value="https://github.com/dohyunkim1" readonly>
+                
+                <label for="experience">Experience:</label>
+                <textarea id="experience" required>Experience in accounting, web development, and data analytics.</textarea>
+                
+                <label for="skills">Skills:</label>
+                <textarea id="skills" readonly>Advanced Knowledge in Microsoft Package: Excel, Word, and PowerPoint.
+Volunteered as a Marketer at Daystar University.
+Voluntarily employed at Mtendere Enterprise as a Sales Assistant.</textarea>
+                
+                <button type="submit">Generate Resume</button>
+            </form>
+            <div id="resumeOutput"></div>
+        </section>
+        
+        <section id="portfolio-generator">
+            <h2>Portfolio Generator</h2>
+            <p>Projects by Alice Nkhoma</p>
+            <div id="portfolioItems" class="drag-container">
+                <div class="draggable" draggable="true">AI Resume Builder</div>
+                <div class="draggable" draggable="true">Dynamic Portfolio Generator</div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="assets/js/dark-mode.js"></script>
+    <script src="assets/js/drag-drop.js"></script>
+    <script src="assets/js/ai-helper.js"></script>
+    <script src="assets/js/server.js"></script>
+</body>
+</html>
+ 
